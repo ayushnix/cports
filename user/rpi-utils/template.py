@@ -1,0 +1,14 @@
+pkgname = "rpi-utils"
+pkgver = "0_git20250318"
+_gitrev = "92900c5c733c8b91a67b1772d4f0a25104f2b05d"
+pkgrel = 0
+archs = ["aarch64"]
+build_style = "cmake"
+hostmakedepends = ["cmake", "ninja"]
+makedepends = ["dtc-devel"]
+pkgdesc = "Scripts and applications for Raspberry Pi"
+license = "BSD-3-Clause"
+url = "https://github.com/raspberrypi/utils"
+source = f"{url}/archive/{_gitrev}.tar.gz"
+sha256 = "b8e950de01b443da55b692223e0b0db0981a09c5eeb06a271b564d50c583fde5"
+hardening = ["cfi", "vis"]
