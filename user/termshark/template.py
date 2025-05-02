@@ -1,0 +1,12 @@
+pkgname = "termshark"
+pkgver = "2.4.0"
+pkgrel = 0
+build_style = "go"
+make_dir = ""
+hostmakedepends = ["go"]
+depends = ["wireshark"]
+pkgdesc = "Terminal UI for Wireshark"
+license = "MIT"
+url = "https://github.com/gcla/termshark"
+source = f"{url}/archive/refs/tags/v{pkgver}.tar.gz"
+sha256 = "949c71866fcd2f9ed71a754ea9e3d1bdc23dee85969dcdc78180f1d18ca8b087"
