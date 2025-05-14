@@ -1,0 +1,26 @@
+From 3d4610d11a998faf1b9d2d332480baf95a29d9cb Mon Sep 17 00:00:00 2001
+From: Joachim Wiberg <troglobit@gmail.com>
+Date: Sat, 14 Sep 2024 10:47:19 +0200
+Subject: [PATCH] Add missing braces, found by GCC 13.2
+
+Signed-off-by: Joachim Wiberg <troglobit@gmail.com>
+---
+ mping.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/mping.c b/mping.c
+index 6a4cb94..7ff2c96 100644
+--- a/mping.c
++++ b/mping.c
+@@ -402,9 +402,10 @@ int ifinfo(char *iface, inet_addr_t *addr, int family)
+
+ 		if (family == AF_UNSPEC) {
+ 			if (ifa->ifa_addr->sa_family != AF_INET &&
+-			    ifa->ifa_addr->sa_family != AF_INET6)
++			    ifa->ifa_addr->sa_family != AF_INET6) {
+ 				dbg("%s no IPv4 or IPv6 address, skipping ...", iface);
+ 				continue;
++			}
+ 		} else if (ifa->ifa_addr->sa_family != family) {
+ 			dbg("%s not matching address family, skipping ...", iface);
+ 			continue;
