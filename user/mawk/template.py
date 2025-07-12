@@ -1,0 +1,12 @@
+pkgname = "mawk"
+pkgver = "1.3.4.20250131"
+_pkgver = "1.3.4-20250131"
+pkgrel = 0
+build_style = "gnu_configure"
+hostmakedepends = ["autoconf"]
+pkgdesc = "Interpreter for the AWK programming language"
+license = "GPL-2.0-only"
+url = "https://invisible-mirror.net/mawk"
+source = f"https://invisible-mirror.net/archives/mawk/mawk-{_pkgver}.tgz"
+sha256 = "51bcb82d577b141d896d9d9c3077d7aaa209490132e9f2b9573ba8511b3835be"
+hardening = ["vis", "cfi"]
