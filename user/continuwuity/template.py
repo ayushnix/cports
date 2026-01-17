@@ -1,0 +1,22 @@
+pkgname = "continuwuity"
+pkgver = "0.5.3"
+pkgrel = 0
+build_style = "cargo"
+make_build_args = [
+    "--no-default-features",
+    "--features",
+    "bindgen-runtime,blurhashing,brotli_compression,console,element_hacks,gzip_compression,io_uring,ldap,media_thumbnail,otlp_telemetry,release_max_log_level,sentry_telemetry,systemd,url_preview,zstd_compression",
+]
+hostmakedepends = ["cargo-auditable", "pkgconf"]
+makedepends = ["liburing-devel", "linux-headers", "rust-std", "zstd-devel"]
+pkgdesc = "Matrix homeserver"
+license = "Apache-2.0"
+url = "https://continuwuity.org"
+source = f"https://forgejo.ellis.link/continuwuation/continuwuity/archive/v{pkgver}.tar.gz"
+sha256 = "2d339e0940d781b332e88f8dd7058773612e7be822bfd0e3cad7e1e5cab16a20"
+
+
+def install(self):
+    self.install_bin(f"target/{self.profile().triplet}/release/conduwuit")
+    self.install_tmpfiles(self.files_path / "tmpfiles.conf")
+    self.install_sysusers(self.files_path / "sysusers.conf")
