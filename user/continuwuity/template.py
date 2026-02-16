@@ -1,5 +1,5 @@
 pkgname = "continuwuity"
-pkgver = "0.5.3"
+pkgver = "0.5.5"
 pkgrel = 0
 build_style = "cargo"
 make_build_args = [
@@ -13,7 +13,7 @@ pkgdesc = "Matrix homeserver"
 license = "Apache-2.0"
 url = "https://continuwuity.org"
 source = f"https://forgejo.ellis.link/continuwuation/continuwuity/archive/v{pkgver}.tar.gz"
-sha256 = "2d339e0940d781b332e88f8dd7058773612e7be822bfd0e3cad7e1e5cab16a20"
+sha256 = "3fd09ac9dd7bd695f8eb061f7cdd1b7a12478c6194d3d7e7805bb311074ea7df"
 
 
 def install(self):
